@@ -294,7 +294,7 @@ body {
   .fourth__block{
       display: flex;
       justify-content: space-between;
-        align-items: center;
+      align-items: center;
     }
 
   .fourth__block--foto{
@@ -389,7 +389,7 @@ body {
     background-image: url(./prod.png);
     background-size: cover;
     width: 350px;
-    height: 500px;
+    height: 550px;
 }
 
 .taimer__text--block{
@@ -535,3 +535,146 @@ body {
    [data-tooltip]:hover::after {
     opacity: 1; /* Показываем подсказку */
    }
+
+   /*Адаптивчек*/
+
+   @media (max-width:1200px){
+  
+   
+   .container{
+       max-width: 700px;
+   }
+   
+   .info{
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   }
+   .info__foto{
+       width: 100px;
+       height: 155px;
+       margin-left: 30px;
+   }
+   .info__text{
+       font-size: 12px;
+       max-width: 300px; 
+       margin-left: 25px;  
+   }
+   .info__text--footnote{
+       font-size: 10px;
+   }
+   .info__text--button{
+        margin-left: 50px;
+        width: auto;
+        font-size: 15px;
+        margin-top: 5px;
+        
+   }
+
+   .composition{
+       justify-content: center;
+   }
+
+   .composition__items--foto{
+       display: none;
+   }
+
+   .composition__items--text{
+       max-width: 100px;
+       font-size: 12px;
+   }
+
+   .composition__foto{
+    width: 100px;
+    height: 155px;
+    margin: 0 20px;
+   }
+
+   .composition__items--item{
+       width: 220px;
+       height: 220px;
+   }
+
+   .slider{
+       width: 600px;
+       height: 340px;
+       overflow: initial;
+   }
+
+   .sliders__item--foto{
+       height: 250px;
+   }
+
+   .slider .img{
+    width: 600px;
+    height: 340px;
+    overflow-y: hidden;
+   }
+
+   #btn1:checked~slider-inner slides {
+    transform: translate(0);
+  }
+  
+  #btn2:checked~.slider-inner .slides {
+    transform: translate(-600px);
+  }
+  
+  #btn3:checked~.slider-inner .slides {
+    transform: translate(-1200px);
+  }
+
+  .fourth__block{
+      flex-direction: column;
+  }
+  
+  .fourth__block--foto{
+      width: 270px;
+      height: 300px;
+  }
+
+  .taimer__block{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .taimer__text--block{
+      justify-content: center;
+  }
+
+  .taimer__text--new{
+      font-size: 30px;
+      margin: 10px 15px;
+  }
+  .taimer__text--old{
+      font-size: 30px;
+  }
+
+  .base-timer__label{
+      font-size: 30px;
+      width: 100px;
+      height: 100px;
+  }
+
+  .base-timer{
+    width: 100px;
+    height: 100px;
+  }
+  .taimer__input{
+      width: 80%;
+      height: 30px;
+  }
+
+  .timer__button{
+      margin-left: 0;
+      width: 300px;
+  }
+
+  [data-tooltip]::after{
+      font-size: 15px;
+      padding: 0;
+  }
+
+
+}
