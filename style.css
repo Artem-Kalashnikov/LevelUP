@@ -1,0 +1,537 @@
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #070607;
+    box-sizing: border-box;
+}
+
+.intro {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    background: url("levelup.png") center no-repeat;
+    background-size: cover;
+}
+
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .8);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.intro__title {
+    margin: 0;
+    font-family: 'Kumar One Outline', cursive;
+    font-size: 75px;
+    color: #CC9933;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
+.video__media {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info__text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    flex-direction: column;
+    display: flex;
+    color: #CC9933;
+}
+
+.info__text--footnote{
+    font-size: 12px;
+}
+
+.info__foto{
+    margin-left: 100px;
+    background-image: url(./prod.png);
+    width: 290px;
+    height: 450px;
+    background-size: cover;
+}
+
+.info__text--button{
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 25px;
+    background-color: Transparent;
+    border: 1px solid transparent;
+    width: 350px;
+    border-radius: 15px;
+    color: white;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+.info__text--button:hover{
+    background-color: #CC9933;
+    border: 1px solid #CC9933;
+}
+
+/*block 2*/
+
+.composition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.composition__items--item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(to top, rgba(30,87,153,0), rgba(30,87,153,0.8), rgba(30,87,153,1),
+    rgba(30,87,153,1), rgba(41,137,216,1), rgba(30,87,153,1), rgba(30,87,153,1),
+    rgba(30,87,153,0.8),rgba(30,87,153,0));
+    border-radius: 50%;
+}
+
+.composition__items--block{
+    display: flex;
+    align-items: center;
+}
+
+.composition__items--foto{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #CC9933;
+}
+
+.composition__items--text{
+    font-style: 12px;
+    max-width: 100px;
+    margin-left: 15px;
+}
+
+.composition__items--button{
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 25px;
+    background-color: Transparent;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    color: black;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.composition__items--button:hover{
+    background-color: #CC9933;
+    border: 1px solid #CC9933;
+}
+
+.composition__foto{
+    background-image: url(./prod.png);
+    width: 290px;
+    height: 450px;
+    background-size: cover;
+
+}
+
+/* Слайдер */
+
+  .slider {
+    position: relative;
+    width: 680px;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  }
+  
+  .slider input[name="switch"] {
+    display: none;
+  }
+
+  .sliders__item{
+      display: flex;
+      align-items: center;
+  }  
+
+  .sliders__item--foto{
+      background-image: url(./doctor.png);
+      height: 340px;
+      background-size: cover;
+      width: 300px;
+  }
+
+  .sliders__item--name{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .sliders__item--text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 50px;
+    line-height: 150%;
+    max-width: 300px;
+    color: #CC9933;
+  }
+
+  .switch {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .switch label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    margin: 0 3px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    border: 5px solid #2f363c;
+    background-color: #738290;
+  }
+  
+  #btn1:checked~.switch label[for="btn1"] {
+    background-color: white;
+  }
+  
+  #btn2:checked~.switch label[for="btn2"] {
+    background-color: white;
+  }
+  
+  #btn3:checked~.switch label[for="btn3"] {
+    background-color: white;
+  }
+  
+  .slider-inner {
+    overflow: hidden;
+  }
+  
+  .slides {
+    width: 300%;
+    transition: all 0.5s;
+  }
+  
+  .slides .img {
+    width: 680px;
+    height: 340px;
+    float: left;
+  }
+  
+  #btn1:checked~slider-inner slides {
+    transform: translate(0);
+  }
+  
+  #btn2:checked~.slider-inner .slides {
+    transform: translate(-680px);
+  }
+  
+  #btn3:checked~.slider-inner .slides {
+    transform: translate(-1360px);
+  }
+
+  /* Опять описание*/
+
+.fourth{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .fourth__block{
+      display: flex;
+      justify-content: space-between;
+        align-items: center;
+    }
+
+  .fourth__block--foto{
+      background-image: url(./prod2.png);
+      width: 470px;
+      height: 400px;
+      background-size: cover;
+  }
+
+  .fourth__block--text{
+    color: #c93;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+  .fourth__block--name{
+    margin: 0;
+    font-family: 'Kumar One Outline', cursive;
+    font-size: 40px;
+    color: #CC9933;
+    text-align: center;
+}
+
+
+
+.fourth__block--description{
+    max-width: 400px;
+}
+
+.fourth__block--composition{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth__block--item{
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.fourth__block--item:nth-child(2){
+    margin: 0 20px;
+}
+
+.fourth__block--item:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.fourth__btn{
+    margin-top: 30px;
+    width: 500px;
+    border-radius: 15px;
+    font-size: 40px;
+    background-color: #CC9933;
+    border: 1px solid transparent;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+    
+.fourth__btn:hover{
+    background-color: transparent;
+    border: 1px solid #cc9933;
+    color: #CC9933;
+}
+
+/* таймер*/
+
+.taimer{
+    margin-top: 150px;
+}
+
+.taimer__name{
+    margin: 0;
+    font-family: 'Kumar One Outline', cursive;
+    font-size: 70px;
+    color: #CC9933;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.taimer__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.taimer__foto{
+    background-image: url(./prod.png);
+    background-size: cover;
+    width: 350px;
+    height: 500px;
+}
+
+.taimer__text--block{
+    display: flex;
+    align-items: center;
+}
+
+.taimer__text--old{
+    font-size: 45px;
+    color: #c93;
+}
+
+.old{
+    text-decoration: line-through;
+}
+
+.taimer__text--new{
+    font-size: 45px;
+    margin: 0 50px;
+}
+
+.taimer-item{
+    color: #fff;
+}
+.base-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+  }
+  
+/* мигание текста цифр цены*/
+
+.blink{
+    animation: blink 3s infinite; /* Параметры анимации */
+}
+@keyframes blink {
+ from { color:#cc9933; /* Непрозрачный текст */ }
+ to { color: #fff; /* Прозрачный текст */ }
+}
+
+
+/* inputы */
+
+.taimer__text--input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+}
+
+.taimer__input--text{
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+.taimer__input{
+    width: 400px;
+    margin: 15px auto;
+    height: 50px;
+    
+}
+
+.timer__button{
+    margin: 15px auto;
+    margin-left: -38px;
+}
+
+.taimer__input{
+    background-color: transparent   ;
+    border-radius: 15px;
+    color: #CC9933;
+}
+
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+
+    /* Выводим текст */
+  }
+
+  [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+   }
