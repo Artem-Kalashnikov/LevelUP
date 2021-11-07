@@ -791,9 +791,18 @@ body {
 }
 
 .taimer__text--input{
+    margin: 0 auto;
     margin-left: 10px;
+    align-items: center;
 }
 
+.timer__button{
+    margin: unset;
+}
+
+.taimer__input{
+    width: 280px;
+}
 
 
 }
