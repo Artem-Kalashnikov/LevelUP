@@ -96,7 +96,8 @@ body {
     background-image: url(./prod.png);
     width: 290px;
     height: 450px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .info__text--button{
@@ -675,6 +676,124 @@ body {
       font-size: 15px;
       padding: 0;
   }
+}
+
+@media (max-width: 699px) {
+    .intro__title{
+        font-size: 20px;
+        margin-top: 100px;
+    }
+
+    .info__text ul{
+        width: 200px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .info__text--items{
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .info__text--footnote{
+        font-size: 8px;
+        padding-bottom: 45px;
+    }
+
+    .composition{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .composition__foto{
+        order: 0;
+        margin-bottom: 35px;
+    }
+
+    .composition__items{
+        order: 1;
+    }
+
+    
+   .slider{
+    width: 210px;
+    height: 140px;
+    overflow: initial;
+}
+
+.sliders__item--foto{
+    display: none;
+}
+
+.slider .img{
+ width: 210px;
+ height: 140px;
+ overflow-y: hidden;
+}
+
+#btn1:checked~slider-inner slides {
+ transform: translate(0);
+}
+
+#btn2:checked~.slider-inner .slides {
+ transform: translate(-210px);
+}
+
+#btn3:checked~.slider-inner .slides {
+ transform: translate(-420px);
+}
+
+.sliders__item--name{
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: auto;
+}    
+
+.sliders__item--description{
+    font-size: 14px;
+    margin-left: 10px;
+    width: 150px;
+    line-height: auto;
+}
+
+.fourth__block--foto {
+    width: 200px;
+    height: 222px;
+}
+
+.fourth__btn {
+    margin-top: 20px;
+    width: 280px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.fourth__block--text{
+    margin: 0 auto;
+    width: 300px;
+}
+
+.taimer{
+    margin-top: 50px;
+}
+
+.taimer__name{
+    font-size: 45px;
+}
+
+.taimer__foto{
+    width: 160px;
+    height: 250px;
+}
+
+.taimer__text--block{
+    flex-direction: column;
+}
+
+.taimer__text--input{
+    margin-left: 10px;
+}
+
 
 
 }
